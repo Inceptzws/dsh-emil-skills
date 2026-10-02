@@ -21,11 +21,14 @@
 dsh plugin --profile desktop add link:/绝对路径/dsh-emil-skills
 ```
 
-### 2. 从 GitHub 安装（推送之后）
+### 2. 从 GitHub 安装（无需克隆）
 
 ```bash
-dsh plugin --profile desktop add github:<owner>/dsh-emil-skills
+dsh plugin --profile desktop add github:Inceptzws/dsh-emil-skills
 ```
+
+> 本仓库已发布在 <https://github.com/Inceptzws/dsh-emil-skills>。包内没有依赖、也没有
+> `prepare` 构建脚本，所以 pnpm 不会要求 `allowBuilds` 批准。
 
 ### 3. 在 Harness 里用插件管理页 / `plugin_manager`
 
@@ -171,7 +174,7 @@ a design-engineering skill set for designers and engineers — as a **DeepSeek H
 # local checkout
 dsh plugin --profile desktop add link:/absolute/path/to/dsh-emil-skills
 # from GitHub
-dsh plugin --profile desktop add github:<owner>/dsh-emil-skills
+dsh plugin --profile desktop add github:Inceptzws/dsh-emil-skills
 ```
 
 The bundle inserts one row (`skill-emil`) whose `apply()` parses every
