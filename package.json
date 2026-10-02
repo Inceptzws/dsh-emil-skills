@@ -1,0 +1,59 @@
+{
+  "name": "dsh-emil-skills",
+  "version": "1.0.0",
+  "description": "Emil Kowalski's design-engineering skills — motion, UI polish, Apple design, mobile-native, Swift — bundled as a DeepSeek Harness plugin.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "skills",
+    "design-engineering",
+    "animation",
+    "motion",
+    "ui",
+    "apple-design"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./skills/*": "./skills/*"
+  },
+  "files": [
+    "lib",
+    "skills",
+    "locale",
+    "scripts",
+    "cordis.patch.yml",
+    "icon.svg",
+    "performance-cheatsheet.md",
+    "vendor-manifest.json",
+    "README.md",
+    "PROVENANCE.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "verify": "node scripts/verify.mjs"
+  },
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "author": "Inceptzws",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Inceptzws/dsh-emil-skills.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Inceptzws/dsh-emil-skills/issues"
+  },
+  "homepage": "https://github.com/Inceptzws/dsh-emil-skills#readme",
+  "license": "MIT"
+}

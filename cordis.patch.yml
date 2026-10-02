@@ -1,0 +1,20 @@
+# ============================================================================
+# dsh-emil-skills — DSH bundle patch
+# ============================================================================
+# This is the plugin's mount declaration. DSH stacks each plugin bundle's patch
+# onto the profile's configuration tree at boot, so this file inserts the skill
+# provider row that publishes Emil Kowalski's design-engineering skills.
+#
+# Install (from a checkout, local development):
+#   dsh plugin --profile desktop add link:/absolute/path/to/dsh-emil-skills
+#
+# Install (from GitHub, once pushed):
+#   dsh plugin --profile desktop add github:<owner>/dsh-emil-skills
+#
+# The package ships no dependencies and no build step, so none of pnpm's
+# `allowBuilds` approvals are needed.
+# ============================================================================
+
+- insert:
+    - id: skill-emil
+      name: dsh-emil-skills
