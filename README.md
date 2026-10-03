@@ -1,5 +1,10 @@
 # dsh-emil-skills
 
+[![npm version](https://img.shields.io/npm/v/dsh-emil-skills.svg)](https://www.npmjs.com/package/dsh-emil-skills)
+[![verify](https://github.com/Inceptzws/dsh-emil-skills/actions/workflows/verify.yml/badge.svg)](https://github.com/Inceptzws/dsh-emil-skills/actions/workflows/verify.yml)
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![dsh-plugin](https://img.shields.io/badge/dsh--plugin-ecosystem-7C6CF6)](https://github.com/topics/dsh-plugin)
+
 [English](#english) | 中文
 
 把 [Emil Kowalski 的 skills](https://github.com/emilkowalski/skills)（面向设计师与工程师的界面/动效技能集）
@@ -15,10 +20,16 @@
 
 ## 安装
 
-### 1. 从本地目录安装（开发/自用）
+### 1. 从 npm 安装（推荐）
 
 ```bash
-dsh plugin --profile desktop add link:/绝对路径/dsh-emil-skills
+dsh plugin add dsh-emil-skills
+```
+
+需要指定 profile 时：
+
+```bash
+dsh plugin --profile desktop add dsh-emil-skills
 ```
 
 ### 2. 从 GitHub 安装（无需克隆）
@@ -30,9 +41,15 @@ dsh plugin --profile desktop add github:Inceptzws/dsh-emil-skills
 > 本仓库已发布在 <https://github.com/Inceptzws/dsh-emil-skills>。包内没有依赖、也没有
 > `prepare` 构建脚本，所以 pnpm 不会要求 `allowBuilds` 批准。
 
-### 3. 在 Harness 里用插件管理页 / `plugin_manager`
+### 3. 从本地目录安装（改插件源码时用）
 
-在 Web 侧边栏的 **Plugins** 页面选择 **Install bundle**，target 填本目录的绝对路径；
+```bash
+dsh plugin --profile desktop add link:/绝对路径/dsh-emil-skills
+```
+
+### 4. 在 Harness 里用插件管理页 / `plugin_manager`
+
+在 Web 侧边栏的 **Plugins** 页面选择 **Install bundle**，target 填包名或本目录的绝对路径；
 或让 Agent 调用 `plugin_manager` 的 `install_bundle`（需要 danger-full-access 或逐次批准）。
 
 > 安装会把 `dsh-emil-skills` 写入 profile 的依赖并选中它的 bundle，重启后依然生效。
@@ -171,10 +188,12 @@ npm run verify
 a design-engineering skill set for designers and engineers — as a **DeepSeek Harness bundle plugin**.
 
 ```bash
-# local checkout
-dsh plugin --profile desktop add link:/absolute/path/to/dsh-emil-skills
+# from npm (recommended)
+dsh plugin add dsh-emil-skills
 # from GitHub
 dsh plugin --profile desktop add github:Inceptzws/dsh-emil-skills
+# local checkout, while editing the plugin itself
+dsh plugin --profile desktop add link:/absolute/path/to/dsh-emil-skills
 ```
 
 The bundle inserts one row (`skill-emil`) whose `apply()` parses every

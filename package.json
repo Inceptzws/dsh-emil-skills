@@ -5,8 +5,12 @@
   "keywords": [
     "dsh",
     "dsh-plugin",
+    "deepseek",
     "deepseek-harness",
+    "harness",
+    "plugin",
     "skills",
+    "agent-skills",
     "design-engineering",
     "animation",
     "motion",
@@ -41,7 +45,12 @@
     }
   },
   "scripts": {
-    "verify": "node scripts/verify.mjs"
+    "verify": "node scripts/verify.mjs",
+    "prepublishOnly": "node scripts/verify.mjs"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "engines": {
     "node": ">=20.11.0"
